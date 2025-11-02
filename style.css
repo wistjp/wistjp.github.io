@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #080808;
+  color: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ==== HEADER ==== */
+header {
+  background: linear-gradient(90deg, #000000, #0a0a0a, #000000);
+  padding: 25px 0;
+  text-align: center;
+  border-bottom: 2px solid #00c3ff;
+  box-shadow: 0 0 15px #00c3ff55;
+}
+
+header h1 {
+  color: #00c3ff;
+  text-shadow: 0 0 10px #00c3ff, 0 0 20px #0099ff;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+nav a:hover,
+nav a.active {
+  color: #00c3ff;
+  box-shadow: 0 0 10px #00c3ff;
+}
+
+/* ==== MAIN CONTENT ==== */
+main {
+  padding: 50px 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+h2 {
+  color: #00c3ff;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00c3ff77;
+}
+
+/* ==== ABOUT (自己紹介) ==== */
+.about p {
+  margin: 10px 0;
+  color: #ddd;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+/* ==== CARDS (プログラミングページ) ==== */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 15px;
+  width: 250px;
+  padding: 25px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent, #00c3ff, transparent 30%);
+  animation: rotate 4s linear infinite;
+  opacity: 0.4;
+}
+
+.card h3 {
+  color: #00c3ff;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #00c3ff55;
+}
+
+/* ==== BUTTON ==== */
+a.button {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 40px;
+  border: 2px solid #00c3ff;
+  color: #00c3ff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+a.button:hover {
+  background-color: #00c3ff;
+  color: #000;
+  box-shadow: 0 0 20px #00c3ff;
+  transform: scale(1.05);
+}
+
+/* ==== ANIMATIONS ==== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
